@@ -16,3 +16,8 @@ type t;
 
 /* JSON */
 [@bs.val] external json_parse: string => array('a) = "JSON.parse";
+
+module ReduxUtils = {
+    [@bs.module "../redux/helpers/functions.ts"] [@bs.scope ("getState")] external store: unit = "";
+    [@bs.module "../redux/helpers/functions.ts"] [@bs.scope ("dispatch")] external dispatch: unit = "";
+}

@@ -20,6 +20,11 @@ module.exports = {
   performance: {
     maxAssetSize: 400000
   },
+  devtool: 'inline-source-map',
+  resolve: {
+    // Add `.ts` and `.tsx` as a resolvable extension.
+    extensions: [".ts", ".tsx", ".js"]
+  },
   module: {
     rules: [
       {
@@ -48,6 +53,7 @@ module.exports = {
         },
       ],
     },
+    {test: /\.ts$/, exclude: /node_modules/, loader: 'ts-loader'}
   ]
   },
   plugins: [

@@ -3,8 +3,8 @@ open Home_styles;
 
 [@react.component]
 let make = () => {
-    let read_dir = 
-        Utils.localStorage("dirs") 
+    let read_dir = "dirs"
+        -> Utils.localStorage
             -> Utils.json_parse;
    
     <div className="article-detail">
