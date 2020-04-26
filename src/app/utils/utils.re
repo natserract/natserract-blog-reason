@@ -10,6 +10,9 @@
 /* print string element */
 let textEl: string => React.element = React.string;
 
+/* print string element */
+let textEl2: string => React.element = React.string;
+
 /* localStorage */
 type t;
 [@bs.val] external localStorage: string => string = "localStorage.getItem";
@@ -17,7 +20,16 @@ type t;
 /* JSON */
 [@bs.val] external json_parse: string => array('a) = "JSON.parse";
 
+/* Redux */
 module ReduxUtils = {
-    [@bs.module "../redux/helpers/functions.ts"] [@bs.scope ("getState")] external store: unit = "";
-    [@bs.module "../redux/helpers/functions.ts"] [@bs.scope ("dispatch")] external dispatch: unit = "";
+    type t;
+
+    [@bs.module "../store/helpers/functions.ts"] [@bs.scope ("getState")] external redux_store: unit = "";
+    [@bs.module "../store/helpers/functions.ts"]  external dispatch: string => unit = "dispatch";
+
+    [@bs.module "react-redux"] external useSelectorBool: (~state: Js.t('a) => unit) => bool = "useSelector";
+    [@bs.module "react-redux"] external useSelectorArray: (~state: Js.t('a) => unit) => array('a) = "useSelector";
+    [@bs.module "react-redux"] external useSelectorString: (~state: Js.t('a) => unit) => string = "useSelector";
+
+    [@bs.module "react-redux"] external useDispatch: unit => unit = "useDispatch";
 }

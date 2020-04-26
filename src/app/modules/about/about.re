@@ -1,7 +1,9 @@
 
+open Utils;
 
 [@react.component]
-let make = () => 
-    <div className="about"> 
-        "Ini halaman about" -> Utils.textEl
+let make = () => {
+    <div>
+        "Ini halaman about" -> textEl
     </div>
+}

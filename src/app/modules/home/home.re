@@ -1,20 +1,33 @@
 
-open Home_styles;
+open Utils;
+open ReduxUtils;
 
 [@react.component]
 let make = () => {
-    let read_dir = "dirs"
-        -> Utils.localStorage
-            -> Utils.json_parse;
-   
-    <div className="article-detail">
-        <ul>
-        ( read_dir
-            -> Belt.Array.mapWithIndex((i, item) => {
-                <Link key=(string_of_int(i)) href=("/#/post/"++item)>item -> Utils.textEl</Link>
-            })   
-            -> React.array
-        )
-        </ul>
-    </div>    
+    let loading_state = useSelectorBool(state => state##fileSystemState##loading);
+    let dir_state = useSelectorArray(state => state##fileSystemState##dir);
+    let err = useSelectorString(state => state##fileSystemState##errors);
+
+    React.useEffect0(() => {
+        dispatch("@@filesystem/LOAD");
+        None
+    });
+    
+    switch loading_state {
+        | true => <span> "Loading" -> textEl </span>
+        | false =>  
+            <ul>
+                {
+                    dir_state
+                        -> Belt.Array.mapWithIndex((i, item) => {
+                                let get_items = Js.String.make(item);
+                                <Link key=(string_of_int(i)) href=("/#/post/"++get_items)>get_items -> textEl</Link>
+                        })
+                        -> React.array
+                }
+            </ul>
+
+        | _ => err -> textEl
+    };
+ 
 }
