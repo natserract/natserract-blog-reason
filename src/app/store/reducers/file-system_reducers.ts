@@ -4,7 +4,8 @@ import { FileSystemActionTypes, FileSystemActions, FileSystemState } from '../ty
 const initial_state: FileSystemState = {
     loading: false,
     errors: undefined,
-    dir: []
+    dir: [],
+    description: [],
 };
 
 export const fileSystemReducer: Reducer<FileSystemState, FileSystemActions> = (state = initial_state, action): FileSystemState => {
@@ -19,7 +20,8 @@ export const fileSystemReducer: Reducer<FileSystemState, FileSystemActions> = (s
             return {
                 ...state,
                 loading: false,
-                dir: action.payload.data
+                dir: action.payload.data,
+                description: action.payload.article_description
             }
         }
         case FileSystemActionTypes.ERROR: {

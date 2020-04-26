@@ -33,3 +33,12 @@ module ReduxUtils = {
 
     [@bs.module "react-redux"] external useDispatch: unit => unit = "useDispatch";
 }
+
+/* Array */
+let find_unique_arr_value = [%raw "
+    function(arr) {
+        let t = new Set(arr);
+        let val = t.values();
+        return Array.from(val);
+    }
+"]

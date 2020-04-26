@@ -7,6 +7,7 @@ let appRoutesConfig = () => {
 
     switch (hash) {
       | [|"", "post", slug|] => Post(slug)
+      | [|"", "contributing"|]  => Contributing
       | [|"", "about"|]  => About
       | [|""|] => Home
       | _ => NotFound

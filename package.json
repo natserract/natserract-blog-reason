@@ -15,6 +15,7 @@
   "author": "",
   "license": "MIT",
   "dependencies": {
+    "bs-css": "^11.0.0",
     "bs-css-emotion": "^1.2.0",
     "markdown-loader": "^5.1.0",
     "marked": "^1.0.0",
@@ -22,11 +23,8 @@
     "react-dom": "^16.8.1",
     "react-redux": "^7.2.0",
     "reason-react": ">=0.7.0",
-    "reductive": "^2.0.1",
     "redux": "^4.0.5",
-    "redux-observable": "^1.2.0",
     "redux-thunk": "^2.3.0",
-    "reselect": "^4.0.0",
     "rxjs": "^6.5.5",
     "typesafe-actions": "^5.1.0"
   },

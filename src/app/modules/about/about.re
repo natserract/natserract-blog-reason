@@ -4,6 +4,8 @@ open Utils;
 [@react.component]
 let make = () => {
     <div>
-        "Ini halaman about" -> textEl
+        <Container>
+            "Ini halaman about" -> textEl
+        </Container>
     </div>
 }

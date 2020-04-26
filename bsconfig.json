@@ -16,8 +16,8 @@
   "namespace": true,
   "bs-dependencies": [
     "reason-react",
-    "bs-css-emotion",
-    "reductive"
+    "bs-css",
+    "bs-css-emotion"
   ],
   "refmt": 3
 }
