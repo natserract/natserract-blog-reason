@@ -19,13 +19,13 @@ module Styles = {
                 selector(
                     "a", [
                         display(`block),
-                        color(`hex("006600"))
+                        color(`hex("006600")),
                     ]
                 ), 
 
                 selector(
                     "span", [
-                        paddingLeft(`px(15))
+                        paddingLeft(`px(15)),
                     ]
                 )
             ]

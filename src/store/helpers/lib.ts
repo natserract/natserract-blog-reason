@@ -13,9 +13,9 @@ export async function findDirectory(
         .then(data => {
             empty_str = data;
 
-            let match_1 = empty_str.match(regex);
-            let match_2 = match_1.join("").match(regex_sec).join(",");
-            let result = match_2.replace(regex_third, '').split(",").slice(1);
+            let match_1 = empty_str.match(regex),
+                match_2 = match_1.join("").match(regex_sec).join(","),
+                result = match_2.replace(regex_third, '').split(",").slice(1);
 
             return result
         })
@@ -36,11 +36,17 @@ export async function findMarkdownPath(path: string[]): Promise<any> {
             .then(res => res.text())
             .then(data => {
                 empty_str = data;
-                let match_1 = empty_str.match(regex_md).join("");
-                let match_2 = match_1.replace(regex_md_sec, '');
-                let result = match_2.replace(regex_md_third, '');
-    
-                empty_arr.push(result);
+
+                // Checking if md file has decription 
+                if(empty_str !== "") {
+                    let match_1 = empty_str.match(regex_md).join(""),
+                        match_2 = match_1.replace(regex_md_sec, ''),
+                        result = match_2.replace(regex_md_third, '');
+        
+                    empty_arr.push(result);
+                } else {
+                    empty_arr.push("");
+                }
     
             })
     
