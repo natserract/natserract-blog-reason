@@ -10,9 +10,6 @@
 /* print string element */
 let textEl: string => React.element = React.string;
 
-/* print string element */
-let textEl2: string => React.element = React.string;
-
 /* localStorage */
 type t;
 [@bs.val] external localStorage: string => string = "localStorage.getItem";

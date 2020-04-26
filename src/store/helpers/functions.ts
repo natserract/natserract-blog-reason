@@ -13,7 +13,7 @@ type Act =
 const composeEnchancers  = (window as any).__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
 const enchancers = composeEnchancers(applyMiddleware(thunk));
 
-const store = {
+const functions = {
     store: createStore(
         RootReducers,
         enchancers
@@ -47,4 +47,4 @@ const store = {
 
 
 
-export = store;
+export = functions;

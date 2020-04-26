@@ -7,7 +7,7 @@ let make = (~slug: string) => {
     <div className="article-detail">
         <Container>
             <article dangerouslySetInnerHTML={ 
-                "__html": marked(import("../../../../posts/"++slug++"/index.md")) 
+                "__html": marked(import("../../../posts/"++slug++"/index.md")) 
             } />
         </Container>
     </div>    

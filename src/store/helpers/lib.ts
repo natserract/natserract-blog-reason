@@ -21,7 +21,7 @@ export async function findDirectory(
         })
 };
 
-export async function findMDFile(path: string[]): Promise<any> {
+export async function findMarkdownPath(path: string[]): Promise<any> {
     var empty_arr = [];
     var empty_str = "";
     

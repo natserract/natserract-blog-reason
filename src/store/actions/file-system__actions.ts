@@ -2,7 +2,7 @@ import { FileSystemState, FileSystemActions, FileSystemActionTypes } from '../ty
 import { ActionCreator } from 'redux';
 import { ThunkAction } from 'redux-thunk';
 import { action } from 'typesafe-actions';
-import { findMDFile } from '../helpers/lib';
+import { findMarkdownPath } from '../helpers/lib';
 import { findDirectory } from '../helpers/lib';
 
 export const fetch_request = () => action(FileSystemActionTypes.REQUEST);
@@ -13,7 +13,7 @@ export const fetch_dir: ActionCreator<ThunkAction<Promise<any>, FileSystemState,
 
     await findDirectory('../../posts/')
             .then((dirs) => {
-                findMDFile(dirs).then(md_description => {
+                findMarkdownPath(dirs).then(md_description => {
                     dispatch({
                         type: FileSystemActionTypes.LOAD,
                         payload: {
