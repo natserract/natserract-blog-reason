@@ -13,6 +13,15 @@ let globalStyles = {j|
         font-family: serif;
         height: 100%;
         background: #dcf1d5;
+        color: #224326;
+        line-height: 1.3;
+    }
+    a {
+        color: #047a04;
     }
    
+    img {
+        width: 100%;
+        max-width: 100%;
+    }
 |j};

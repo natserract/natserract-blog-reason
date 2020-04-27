@@ -58,7 +58,7 @@ module Styles = {
                 selector(
                     "a", [
                         textDecoration(`none),
-                        color(`hex("006600")),
+                        color(`hex("047a04")),
                         fontSize(`px(14)),
                     ]
                 )
