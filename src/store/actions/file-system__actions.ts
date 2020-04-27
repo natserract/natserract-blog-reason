@@ -11,7 +11,7 @@ export const fetch_dir: ActionCreator<ThunkAction<Promise<any>, FileSystemState,
 () => async dispatch => {
     dispatch(fetch_request());
 
-    await findDirectory('../../posts/')
+    await findDirectory('../../../posts/')
             .then((dirs) => {
                 findMarkdownPath(dirs).then(md_description => {
                     dispatch({
