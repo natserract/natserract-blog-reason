@@ -56,3 +56,5 @@ yarn-error.log
 /lib/*
 /lib/bs/
 .vscode
+# Local Netlify folder
+.netlify
