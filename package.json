@@ -5,6 +5,7 @@
     "build": "bsb -make-world && webpack --mode production",
     "start": "bsb -make-world -w -ws _ && bsb -clean-world",
     "serve": "webpack-dev-server --open --mode development",
+    "serve-production": "webpack-dev-server --open --mode production",
     "test": "echo \"Error: no test specified\" && exit 1",
     "predeploy": "npm run build"
   },
