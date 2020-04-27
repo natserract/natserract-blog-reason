@@ -18,10 +18,12 @@ let make = () => {
                 ~minHeight="100%", 
                 ~display="grid", 
                 ~gridTemplateRows="auto 1fr auto", 
-                ~height="100vh", 
                 ~background="#fff",
                 ~zIndex="10",
                 ~position="relative",
+                ~maxWidth="50%",
+                ~margin="0 auto",
+
             ())
         )>
             <Header/>

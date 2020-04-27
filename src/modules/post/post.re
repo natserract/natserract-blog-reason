@@ -6,7 +6,7 @@ open Utils;
 let make = (~slug: string) => {
     <div className="article-detail">
         <Container>
-            <article dangerouslySetInnerHTML={ 
+            <article className={Styles.article ++ " markdown-body"} dangerouslySetInnerHTML={ 
                 "__html": marked(import("../../../posts/"++slug++"/index.md")) 
             } />
         </Container>

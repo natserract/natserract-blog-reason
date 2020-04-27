@@ -9,6 +9,13 @@ module Styles = {
         display(`flex),
         alignItems(`center),
         padding2(`px(10), `px(0)),
+
+        selector(
+            "> div", [
+                paddingBottom(`px(15)),
+                borderBottom(`px(1), `solid, `hex("dcf1d5")),
+            ]
+        )
     ]);
 
     let ul = style([
@@ -69,7 +76,7 @@ module Styles = {
 
                 selector(
                     "a", [
-                        fontSize(`px(30)),
+                        fontSize(`px(33)),
 
                         selector(
                             "span", [

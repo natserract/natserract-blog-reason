@@ -3,6 +3,7 @@ module Styles = {
     open Css;
 
     let footer = style([
+        paddingTop(`px(25)),
         paddingBottom(`px(20))
     ]);
 
