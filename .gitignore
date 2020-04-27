@@ -29,6 +29,8 @@ cypress.video.json
 cypress/
 record-video.bash
 
+# You can make it easily
+dist/
 
 # AWS
 ecs-params.yml
@@ -56,5 +58,4 @@ yarn-error.log
 /lib/*
 /lib/bs/
 .vscode
-# Local Netlify folder
 .netlify
