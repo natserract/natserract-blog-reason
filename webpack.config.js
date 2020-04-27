@@ -1,5 +1,6 @@
 const path = require('path');
 const HtmlWebPackPlugin = require("html-webpack-plugin");
+const CopyPlugin = require('copy-webpack-plugin');
 
 module.exports = {
   entry: './src/index.bs.js',
@@ -9,8 +10,9 @@ module.exports = {
   // you didn't know this
   mode: 'production',
   output: {
-    path: path.join(__dirname, "dist"),
-    filename: 'index.production.js',
+    path: path.join(__dirname, "build"),
+    filename: 'bundle.js',
+    publicPath: ''
   },
   devServer: {
     contentBase: path.join(__dirname, '/'),
@@ -18,7 +20,7 @@ module.exports = {
     port: 9000
   },
   performance: {
-    maxAssetSize: 400000
+    maxAssetSize: 500000
   },
   devtool: 'inline-source-map',
   resolve: {
@@ -57,6 +59,10 @@ module.exports = {
       test: /\.ts(x?)$/,
       exclude: /node_modules/, 
       loader: 'ts-loader'
+    }, 
+    {
+      test: /\.css$/i,
+      use: ['style-loader', 'css-loader'],
     }
   ]
   },
@@ -65,6 +71,11 @@ module.exports = {
       template: "./index.html",
       filename: "./index.html"
     }),
+    new CopyPlugin([
+      { from: 'assets', to: 'assets' },
+      { from: 'posts', to: 'posts' },
+      { from: 'guide', to: 'guide' }
+    ]),
   ],
   node: { fs: 'empty' },
   target: 'web',

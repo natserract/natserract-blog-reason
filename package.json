@@ -7,7 +7,9 @@
     "serve": "webpack-dev-server --open --mode development",
     "serve-production": "webpack-dev-server --open --mode production",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "predeploy": "npm run build"
+    "homepage": "http://natserract.github.io/natserract",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "keywords": [
     "BuckleScript",
@@ -38,10 +40,14 @@
     "@babel/preset-typescript": "^7.9.0",
     "babel-loader": "^8.1.0",
     "bs-platform": "^6.2.1",
+    "copy-webpack-plugin": "^5.1.1",
+    "css-loader": "^3.5.3",
     "file-loader": "^6.0.0",
+    "gh-pages": "^2.2.0",
     "html-loader": "^1.1.0",
     "html-webpack-plugin": "^4.2.0",
     "moduleserve": "^0.8.4",
+    "transfer-webpack-plugin": "^0.1.4",
     "ts-loader": "^7.0.1",
     "typescript": "^3.8.3",
     "webpack": "^4.43.0",
