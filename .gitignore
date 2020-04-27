@@ -30,7 +30,6 @@ cypress/
 record-video.bash
 
 # You can make it easily
-dist/
 
 # AWS
 ecs-params.yml
