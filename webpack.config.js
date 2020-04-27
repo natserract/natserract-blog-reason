@@ -11,7 +11,7 @@ module.exports = {
   mode: 'production',
   output: {
     path: path.join(__dirname, "build"),
-    filename: 'bundle.js',
+    filename: 'index.production.js',
     publicPath: ''
   },
   devServer: {
