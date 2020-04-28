@@ -6,8 +6,6 @@ release/
 # .env for api keys and configuration variables
 .env
 
-config/
-
 # gRPC client
 bloomrpc/
 

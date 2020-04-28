@@ -13,7 +13,7 @@
     "clean": "rm -rf public",
     "dev": "webpack-dev-server",
     "predeploy": "npm run build:prod",
-    "deploy": "gh-pages -d build"
+    "deploy": "gh-pages -d public"
   },
   "keywords": [
     "BuckleScript",
