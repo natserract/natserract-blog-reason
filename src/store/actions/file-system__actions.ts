@@ -2,8 +2,7 @@ import { FileSystemState, FileSystemActions, FileSystemActionTypes } from '../ty
 import { ActionCreator } from 'redux';
 import { ThunkAction } from 'redux-thunk';
 import { action } from 'typesafe-actions';
-import { findMarkdownPath } from '../helpers/lib';
-import { findDirectory } from '../helpers/lib';
+import { findMarkdownPath, findDirectory } from '../helpers/lib';
 
 export const fetch_request = () => action(FileSystemActionTypes.REQUEST);
 

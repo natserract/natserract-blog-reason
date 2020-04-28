@@ -26,7 +26,7 @@ osascript <<EOF
             end tell
             set newTab to (create tab with default profile)
             tell current session of newTab
-                write text "cd \"$cdto\"$cmd && npm run serve"
+                write text "cd \"$cdto\"$cmd && npm run dev"
             end tell
         end tell
     end tell

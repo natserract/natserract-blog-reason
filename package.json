@@ -2,13 +2,17 @@
   "name": "natserract",
   "version": "0.1.0",
   "scripts": {
-    "build": "bsb -make-world && webpack --mode production",
+    "build:prod": "bsb -make-world && npm run clean && webpack --mode production",
+    "build:dev": "bsb -make-world && npm run clean && webpack --mode development",
     "start": "bsb -make-world -w -ws _ && bsb -clean-world",
-    "serve": "webpack-dev-server --open --mode development",
-    "serve-production": "webpack-dev-server --open --mode production",
+    "serve:prod": "webpack-dev-server --open --mode production",
+    "start:dev": "webpack-dev-server --open --mode development",
+    "start:prod": "npm run build:prod && npm run serve:prod",
     "test": "echo \"Error: no test specified\" && exit 1",
     "homepage": "http://natserract.github.io/natserract",
-    "predeploy": "npm run build",
+    "clean": "rm -rf public",
+    "dev": "webpack-dev-server",
+    "predeploy": "npm run build:prod",
     "deploy": "gh-pages -d build"
   },
   "keywords": [

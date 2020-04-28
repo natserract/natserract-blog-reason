@@ -1,6 +1,6 @@
 <!--- Description: Functional programming in Rust-->
 
-!["fp-in-rust"](./main.png)
+!["fp-in-rust"](../../assets/img/fp-in-rust.png)
 
 # Functional Programming in Rust
 

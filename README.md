@@ -17,13 +17,18 @@ $ npm start
 ```
 3. Open a new terminal tab/window, and type this command:
 ```sh
-$ npm run serve
+$ npm run dev
 ```
 4. Open in you browser [http://localhost:9000/](http://localhost:9000/)
 
 ## Build
+Production:
 ```sh
-$ npm run build
+$ npm run build:prod
+```
+Development:
+```sh
+$ npm run build:dev
 ```
 
 

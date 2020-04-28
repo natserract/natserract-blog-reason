@@ -1,6 +1,6 @@
 <!-- Description: Implementation react pattern in vuejs -->
 
-!["main"](./main.png)
+!["main"](../../assets/img/react-in-vue.png)
 
 # React Pattern in Vue(include: TypeScript) 🔥
 
