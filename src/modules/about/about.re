@@ -35,6 +35,22 @@ let make = () => {
                     <h2> "Work Experience" -> textEl</h2>
                     <div className="work-experience__item">
                         <div className="work-experience-header">
+                            <span><b>"Salt" -> textEl</b></span>
+                            <span>"Frontend Developer" -> textEl</span>
+                            <span>"April 2020 - Present" -> textEl </span>
+                            <span className="province">"Jakarta, Indonesia" -> textEl</span>
+                        </div>
+                        <div className="work-experience-content">
+                            <p>"As a frontend developer, primary role is in building user-facing web products, collaborate with UI/UX designer and backend developer to deliver the best product and user experience." -> textEl</p>
+
+                            <p>
+                                "Develop using modern JavaScript: Angular, React, CSS Preprocessors, webpack and many more." -> textEl
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <div className="work-experience__item">
+                        <div className="work-experience-header">
                             <span><b>"Fantasktic, Inc" -> textEl</b></span>
                             <span>"Frontend Developer" -> textEl</span>
                             <span>"Jan - Apr 2020 (Full-time)" -> textEl </span>

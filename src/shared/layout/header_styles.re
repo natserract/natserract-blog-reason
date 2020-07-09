@@ -76,12 +76,12 @@ module Styles = {
 
                 selector(
                     "a", [
-                        fontSize(`px(33)),
+                        fontSize(`px(35)),
 
                         selector(
                             "span", [
                                 display(`block),
-                                fontSize(`px(12)),
+                                fontSize(`px(13)),
                                 fontWeight(`light),
                                 opacity(0.7)
                             ]
